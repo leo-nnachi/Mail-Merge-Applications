@@ -280,23 +280,7 @@ namespace MailMerger
                     {
                         if (!string.IsNullOrEmpty(_email))
                         {
-                            try
-                            {
-                                //TODO Send Meesage to Database table for queueing. Best to add the whole string to a single field so that it isn't restricted if fields need to be added later
-                                // could add individual fields for databse and user, for display purpose
-
-                                SendMessageToQueue(_formatPath + ";" + _dataSourcePath + ";" + _totalRecords + ";" +
-                                                   _email + ";" + _documentType + ";"
-                                                   + _cbChecked + ";" + _prefix + ";" + _field1 +
-                                                   ";" + _field2 + ";" + _field3 + ";"
-                                                   + _field4 + ";" + _field5 + ";" + _suffix + ";" + _delimiter + ";" + currentDbase.database_name);
-                            }
-                            catch (Exception ex)
-                            {
-                                WriteError(ex.Message);
-                            }
-                            Response.Write(
-                                "Your request is added to the queue. You will be notified when merge process is finished.");
+                            SendtoQueue(currentDbase);
                             WriteError("Your request is added to the queue. You will be notified when merge process is finished.");
                         }
                         else
@@ -342,6 +326,28 @@ namespace MailMerger
             {
                 Response.Write(ex.StackTrace);
             }
+        }
+
+        private void SendtoQueue(DatabaseInfo currentDbase)
+        {
+            try
+            {
+                //TODO Send Meesage to Database table for queueing. Best to add the whole string to a single field so that it isn't restricted if fields need to be added later
+                // could add individual fields for databse and user, for display purpose
+
+                SendMessageToQueue(_formatPath + ";" + _dataSourcePath + ";" + _totalRecords + ";" +
+                                   _email + ";" + _documentType + ";"
+                                   + _cbChecked + ";" + _prefix + ";" + _field1 +
+                                   ";" + _field2 + ";" + _field3 + ";"
+                                   + _field4 + ";" + _field5 + ";" + _suffix + ";" + _delimiter + ";" +
+                                   currentDbase.database_name);
+            }
+            catch (Exception ex)
+            {
+                WriteError(ex.Message);
+            }
+            Response.Write(
+                "Your request is added to the queue. You will be notified when merge process is finished.");
         }
 
         private void MergeMail()
