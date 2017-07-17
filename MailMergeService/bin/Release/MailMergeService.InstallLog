@@ -1,0 +1,239 @@
+﻿Installing assembly 'D:\Asghar\Projects\LP\trunk\MailMerger\MailMergeService\bin\Release\MailMergeService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\Asghar\Projects\LP\trunk\MailMerger\MailMergeService\bin\Release\MailMergeService.InstallLog
+   assemblypath = D:\Asghar\Projects\LP\trunk\MailMerger\MailMergeService\bin\Release\MailMergeService.exe
+Installing service LP Mail merge service...
+Service LP Mail merge service has been successfully installed.
+Creating EventLog source LP Mail merge service in log Application...
+Committing assembly 'D:\Asghar\Projects\LP\trunk\MailMerger\MailMergeService\bin\Release\MailMergeService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\Asghar\Projects\LP\trunk\MailMerger\MailMergeService\bin\Release\MailMergeService.InstallLog
+   assemblypath = D:\Asghar\Projects\LP\trunk\MailMerger\MailMergeService\bin\Release\MailMergeService.exe
+Uninstalling assembly 'D:\Asghar\Projects\LP\trunk\MailMerger\MailMergeService\bin\Release\MailMergeService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\Asghar\Projects\LP\trunk\MailMerger\MailMergeService\bin\Release\MailMergeService.InstallLog
+   assemblypath = D:\Asghar\Projects\LP\trunk\MailMerger\MailMergeService\bin\Release\MailMergeService.exe
+Removing EventLog source LP Mail merge service.
+Service LP Mail merge service is being removed from the system...
+Service LP Mail merge service was successfully removed from the system.
+Installing assembly 'D:\Asghar\Projects\LP\trunk\MailMerger\MailMergeService\bin\Release\MailMergeService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\Asghar\Projects\LP\trunk\MailMerger\MailMergeService\bin\Release\MailMergeService.InstallLog
+   assemblypath = D:\Asghar\Projects\LP\trunk\MailMerger\MailMergeService\bin\Release\MailMergeService.exe
+Installing service LP Mail merge service...
+Service LP Mail merge service has been successfully installed.
+Creating EventLog source LP Mail merge service in log Application...
+Committing assembly 'D:\Asghar\Projects\LP\trunk\MailMerger\MailMergeService\bin\Release\MailMergeService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\Asghar\Projects\LP\trunk\MailMerger\MailMergeService\bin\Release\MailMergeService.InstallLog
+   assemblypath = D:\Asghar\Projects\LP\trunk\MailMerger\MailMergeService\bin\Release\MailMergeService.exe
+Uninstalling assembly 'D:\Asghar\Projects\LP\trunk\MailMerger\MailMergeService\bin\Release\MailMergeService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\Asghar\Projects\LP\trunk\MailMerger\MailMergeService\bin\Release\MailMergeService.InstallLog
+   assemblypath = D:\Asghar\Projects\LP\trunk\MailMerger\MailMergeService\bin\Release\MailMergeService.exe
+Removing EventLog source LP Mail merge service.
+Service LP Mail merge service is being removed from the system...
+Service LP Mail merge service was successfully removed from the system.
+Installing assembly 'D:\Asghar\Projects\LP\trunk\MailMerger\MailMergeService\bin\Release\MailMergeService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\Asghar\Projects\LP\trunk\MailMerger\MailMergeService\bin\Release\MailMergeService.InstallLog
+   assemblypath = D:\Asghar\Projects\LP\trunk\MailMerger\MailMergeService\bin\Release\MailMergeService.exe
+Installing service LP Mail merge service...
+Service LP Mail merge service has been successfully installed.
+Creating EventLog source LP Mail merge service in log Application...
+Committing assembly 'D:\Asghar\Projects\LP\trunk\MailMerger\MailMergeService\bin\Release\MailMergeService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\Asghar\Projects\LP\trunk\MailMerger\MailMergeService\bin\Release\MailMergeService.InstallLog
+   assemblypath = D:\Asghar\Projects\LP\trunk\MailMerger\MailMergeService\bin\Release\MailMergeService.exe
+Uninstalling assembly 'D:\Asghar\Projects\LP\trunk\MailMerger\MailMergeService\bin\Release\MailMergeService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\Asghar\Projects\LP\trunk\MailMerger\MailMergeService\bin\Release\MailMergeService.InstallLog
+   assemblypath = D:\Asghar\Projects\LP\trunk\MailMerger\MailMergeService\bin\Release\MailMergeService.exe
+Removing EventLog source LP Mail merge service.
+Service LP Mail merge service is being removed from the system...
+Service LP Mail merge service was successfully removed from the system.
+Attempt to stop service LP Mail merge service.
+Uninstalling assembly 'D:\Asghar\Projects\LP\trunk\MailMerger\MailMergeService\bin\Release\MailMergeService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\Asghar\Projects\LP\trunk\MailMerger\MailMergeService\bin\Release\MailMergeService.InstallLog
+   assemblypath = D:\Asghar\Projects\LP\trunk\MailMerger\MailMergeService\bin\Release\MailMergeService.exe
+Removing EventLog source LP Mail merge service.
+Warning: The source LP Mail merge service is not registered on the local machine.
+Service LP Mail merge service is being removed from the system...
+Service LP Mail merge service was successfully removed from the system.
+Attempt to stop service LP Mail merge service.
+Uninstalling assembly 'D:\Asghar\Projects\LP\trunk\MailMerger\MailMergeService\bin\Release\MailMergeService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\Asghar\Projects\LP\trunk\MailMerger\MailMergeService\bin\Release\MailMergeService.InstallLog
+   assemblypath = D:\Asghar\Projects\LP\trunk\MailMerger\MailMergeService\bin\Release\MailMergeService.exe
+Removing EventLog source LP Mail merge service.
+Warning: The source LP Mail merge service is not registered on the local machine.
+Service LP Mail merge service is being removed from the system...
+An exception occurred during the uninstallation of the System.ServiceProcess.ServiceInstaller installer.
+System.ComponentModel.Win32Exception: The specified service does not exist as an installed service
+An exception occurred while uninstalling. This exception will be ignored and the uninstall will continue. However, the application might not be fully uninstalled after the uninstall is complete.
+Installing assembly 'D:\Asghar\Projects\LP\trunk\MailMerger\MailMergeService\bin\Release\MailMergeService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\Asghar\Projects\LP\trunk\MailMerger\MailMergeService\bin\Release\MailMergeService.InstallLog
+   assemblypath = D:\Asghar\Projects\LP\trunk\MailMerger\MailMergeService\bin\Release\MailMergeService.exe
+Installing service LP Mail merge service...
+Service LP Mail merge service has been successfully installed.
+Creating EventLog source LP Mail merge service in log Application...
+Committing assembly 'D:\Asghar\Projects\LP\trunk\MailMerger\MailMergeService\bin\Release\MailMergeService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\Asghar\Projects\LP\trunk\MailMerger\MailMergeService\bin\Release\MailMergeService.InstallLog
+   assemblypath = D:\Asghar\Projects\LP\trunk\MailMerger\MailMergeService\bin\Release\MailMergeService.exe
+Uninstalling assembly 'D:\Asghar\Projects\LP\trunk\MailMerger\MailMergeService\bin\Release\MailMergeService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\Asghar\Projects\LP\trunk\MailMerger\MailMergeService\bin\Release\MailMergeService.InstallLog
+   assemblypath = D:\Asghar\Projects\LP\trunk\MailMerger\MailMergeService\bin\Release\MailMergeService.exe
+Removing EventLog source LP Mail merge service.
+Service LP Mail merge service is being removed from the system...
+Service LP Mail merge service was successfully removed from the system.
+Attempt to stop service LP Mail merge service.
+Uninstalling assembly 'D:\Asghar\Projects\LP\trunk\MailMerger\MailMergeService\bin\Release\MailMergeService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\Asghar\Projects\LP\trunk\MailMerger\MailMergeService\bin\Release\MailMergeService.InstallLog
+   assemblypath = D:\Asghar\Projects\LP\trunk\MailMerger\MailMergeService\bin\Release\MailMergeService.exe
+Removing EventLog source LP Mail merge service.
+Warning: The source LP Mail merge service is not registered on the local machine.
+Service LP Mail merge service is being removed from the system...
+An exception occurred during the uninstallation of the System.ServiceProcess.ServiceInstaller installer.
+System.ComponentModel.Win32Exception: The specified service does not exist as an installed service
+An exception occurred while uninstalling. This exception will be ignored and the uninstall will continue. However, the application might not be fully uninstalled after the uninstall is complete.
+Installing assembly 'D:\Asghar\Projects\LP\trunk\MailMerger\MailMergeService\bin\Release\MailMergeService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\Asghar\Projects\LP\trunk\MailMerger\MailMergeService\bin\Release\MailMergeService.InstallLog
+   assemblypath = D:\Asghar\Projects\LP\trunk\MailMerger\MailMergeService\bin\Release\MailMergeService.exe
+Installing service LP Mail merge service...
+Service LP Mail merge service has been successfully installed.
+Creating EventLog source LP Mail merge service in log Application...
+Committing assembly 'D:\Asghar\Projects\LP\trunk\MailMerger\MailMergeService\bin\Release\MailMergeService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\Asghar\Projects\LP\trunk\MailMerger\MailMergeService\bin\Release\MailMergeService.InstallLog
+   assemblypath = D:\Asghar\Projects\LP\trunk\MailMerger\MailMergeService\bin\Release\MailMergeService.exe
+Uninstalling assembly 'D:\Asghar\Projects\LP\trunk\MailMerger\MailMergeService\bin\Release\MailMergeService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\Asghar\Projects\LP\trunk\MailMerger\MailMergeService\bin\Release\MailMergeService.InstallLog
+   assemblypath = D:\Asghar\Projects\LP\trunk\MailMerger\MailMergeService\bin\Release\MailMergeService.exe
+Removing EventLog source LP Mail merge service.
+Service LP Mail merge service is being removed from the system...
+Service LP Mail merge service was successfully removed from the system.
+Installing assembly 'D:\Asghar\Projects\LP\trunk\MailMerger\MailMergeService\bin\Release\MailMergeService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\Asghar\Projects\LP\trunk\MailMerger\MailMergeService\bin\Release\MailMergeService.InstallLog
+   assemblypath = D:\Asghar\Projects\LP\trunk\MailMerger\MailMergeService\bin\Release\MailMergeService.exe
+Installing service LP Mail merge service...
+Service LP Mail merge service has been successfully installed.
+Creating EventLog source LP Mail merge service in log Application...
+Committing assembly 'D:\Asghar\Projects\LP\trunk\MailMerger\MailMergeService\bin\Release\MailMergeService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\Asghar\Projects\LP\trunk\MailMerger\MailMergeService\bin\Release\MailMergeService.InstallLog
+   assemblypath = D:\Asghar\Projects\LP\trunk\MailMerger\MailMergeService\bin\Release\MailMergeService.exe
+Uninstalling assembly 'D:\Asghar\Projects\LP\trunk\MailMerger\MailMergeService\bin\Release\MailMergeService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\Asghar\Projects\LP\trunk\MailMerger\MailMergeService\bin\Release\MailMergeService.InstallLog
+   assemblypath = D:\Asghar\Projects\LP\trunk\MailMerger\MailMergeService\bin\Release\MailMergeService.exe
+Removing EventLog source LP Mail merge service.
+Service LP Mail merge service is being removed from the system...
+Service LP Mail merge service was successfully removed from the system.
+Installing assembly 'D:\Asghar\Projects\LP\trunk\MailMerger\MailMergeService\bin\Release\MailMergeService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\Asghar\Projects\LP\trunk\MailMerger\MailMergeService\bin\Release\MailMergeService.InstallLog
+   assemblypath = D:\Asghar\Projects\LP\trunk\MailMerger\MailMergeService\bin\Release\MailMergeService.exe
+Installing service LP Mail merge service...
+Creating EventLog source LP Mail merge service in log Application...
+Rolling back assembly 'D:\Asghar\Projects\LP\trunk\MailMerger\MailMergeService\bin\Release\MailMergeService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\Asghar\Projects\LP\trunk\MailMerger\MailMergeService\bin\Release\MailMergeService.InstallLog
+   assemblypath = D:\Asghar\Projects\LP\trunk\MailMerger\MailMergeService\bin\Release\MailMergeService.exe
+Restoring event log to previous state for source LP Mail merge service.
+Uninstalling assembly 'D:\Asghar\Projects\LP\trunk\MailMerger\MailMergeService\bin\Release\MailMergeService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\Asghar\Projects\LP\trunk\MailMerger\MailMergeService\bin\Release\MailMergeService.InstallLog
+   assemblypath = D:\Asghar\Projects\LP\trunk\MailMerger\MailMergeService\bin\Release\MailMergeService.exe
+Removing EventLog source LP Mail merge service.
+Warning: The source LP Mail merge service is not registered on the local machine.
+Service LP Mail merge service is being removed from the system...
+Service LP Mail merge service was successfully removed from the system.
+Installing assembly 'D:\Asghar\Projects\LP\trunk\MailMerger\MailMergeService\bin\Release\MailMergeService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\Asghar\Projects\LP\trunk\MailMerger\MailMergeService\bin\Release\MailMergeService.InstallLog
+   assemblypath = D:\Asghar\Projects\LP\trunk\MailMerger\MailMergeService\bin\Release\MailMergeService.exe
+Installing service LP Mail merge service...
+Service LP Mail merge service has been successfully installed.
+Creating EventLog source LP Mail merge service in log Application...
+Committing assembly 'D:\Asghar\Projects\LP\trunk\MailMerger\MailMergeService\bin\Release\MailMergeService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\Asghar\Projects\LP\trunk\MailMerger\MailMergeService\bin\Release\MailMergeService.InstallLog
+   assemblypath = D:\Asghar\Projects\LP\trunk\MailMerger\MailMergeService\bin\Release\MailMergeService.exe
+Uninstalling assembly 'D:\Asghar\Projects\LP\trunk\MailMerger\MailMergeService\bin\Release\MailMergeService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\Asghar\Projects\LP\trunk\MailMerger\MailMergeService\bin\Release\MailMergeService.InstallLog
+   assemblypath = D:\Asghar\Projects\LP\trunk\MailMerger\MailMergeService\bin\Release\MailMergeService.exe
+Removing EventLog source LP Mail merge service.
+Service LP Mail merge service is being removed from the system...
+Service LP Mail merge service was successfully removed from the system.
+Attempt to stop service LP Mail merge service.
+Installing assembly 'D:\Asghar\Projects\LP\trunk\MailMerger\MailMergeService\bin\Release\MailMergeService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\Asghar\Projects\LP\trunk\MailMerger\MailMergeService\bin\Release\MailMergeService.InstallLog
+   assemblypath = D:\Asghar\Projects\LP\trunk\MailMerger\MailMergeService\bin\Release\MailMergeService.exe
+Installing service LP Mail merge service...
+Service LP Mail merge service has been successfully installed.
+Creating EventLog source LP Mail merge service in log Application...
+Committing assembly 'D:\Asghar\Projects\LP\trunk\MailMerger\MailMergeService\bin\Release\MailMergeService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\Asghar\Projects\LP\trunk\MailMerger\MailMergeService\bin\Release\MailMergeService.InstallLog
+   assemblypath = D:\Asghar\Projects\LP\trunk\MailMerger\MailMergeService\bin\Release\MailMergeService.exe
+Uninstalling assembly 'D:\Asghar\Projects\LP\trunk\MailMerger\MailMergeService\bin\Release\MailMergeService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\Asghar\Projects\LP\trunk\MailMerger\MailMergeService\bin\Release\MailMergeService.InstallLog
+   assemblypath = D:\Asghar\Projects\LP\trunk\MailMerger\MailMergeService\bin\Release\MailMergeService.exe
+Removing EventLog source LP Mail merge service.
+Service LP Mail merge service is being removed from the system...
+Service LP Mail merge service was successfully removed from the system.
+Attempt to stop service LP Mail merge service.
+Installing assembly 'D:\Asghar\Projects\LP\trunk\MailMerger\MailMergeService\bin\Release\MailMergeService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\Asghar\Projects\LP\trunk\MailMerger\MailMergeService\bin\Release\MailMergeService.InstallLog
+   assemblypath = D:\Asghar\Projects\LP\trunk\MailMerger\MailMergeService\bin\Release\MailMergeService.exe
+Installing service LP Mail merge service...
+Service LP Mail merge service has been successfully installed.
+Creating EventLog source LP Mail merge service in log Application...
+Committing assembly 'D:\Asghar\Projects\LP\trunk\MailMerger\MailMergeService\bin\Release\MailMergeService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\Asghar\Projects\LP\trunk\MailMerger\MailMergeService\bin\Release\MailMergeService.InstallLog
+   assemblypath = D:\Asghar\Projects\LP\trunk\MailMerger\MailMergeService\bin\Release\MailMergeService.exe

@@ -1,0 +1,9 @@
+D:\Projects\LPS\MailMerger\MailMergeService\bin\Release\MailMergeService.exe.config
+D:\Projects\LPS\MailMerger\MailMergeService\bin\Release\MailMergeService.exe
+D:\Projects\LPS\MailMerger\MailMergeService\bin\Release\MailMergeService.pdb
+D:\Projects\LPS\MailMerger\MailMergeService\bin\Release\Ionic.Zip.dll
+D:\Projects\LPS\MailMerger\MailMergeService\obj\x86\Release\MailMergeService.MergeService.resources
+D:\Projects\LPS\MailMerger\MailMergeService\obj\x86\Release\MailMergeService.ProjectInstaller.resources
+D:\Projects\LPS\MailMerger\MailMergeService\obj\x86\Release\MailMergeService.csproj.GenerateResource.Cache
+D:\Projects\LPS\MailMerger\MailMergeService\obj\x86\Release\MailMergeService.exe
+D:\Projects\LPS\MailMerger\MailMergeService\obj\x86\Release\MailMergeService.pdb

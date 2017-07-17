@@ -1,0 +1,80 @@
+D:\Asghar\Projects\LPS-BB\MailMerger\MailMergeService\bin\Debug\MailMergeService.exe.config
+D:\Asghar\Projects\LPS-BB\MailMerger\MailMergeService\bin\Debug\MailMergeService.exe
+D:\Asghar\Projects\LPS-BB\MailMerger\MailMergeService\bin\Debug\MailMergeService.pdb
+D:\Asghar\Projects\LPS-BB\MailMerger\MailMergeService\bin\Debug\Ionic.Zip.dll
+D:\Asghar\Projects\LPS-BB\MailMerger\MailMergeService\obj\x86\Debug\MailMergeService.MergeService.resources
+D:\Asghar\Projects\LPS-BB\MailMerger\MailMergeService\obj\x86\Debug\MailMergeService.ProjectInstaller.resources
+D:\Asghar\Projects\LPS-BB\MailMerger\MailMergeService\obj\x86\Debug\MailMergeService.csproj.GenerateResource.Cache
+D:\Asghar\Projects\LPS-BB\MailMerger\MailMergeService\obj\x86\Debug\MailMergeService.exe
+D:\Asghar\Projects\LPS-BB\MailMerger\MailMergeService\obj\x86\Debug\MailMergeService.pdb
+D:\Projects\LPS Project\MailMerger\MailMergeService\bin\Debug\MailMergeService.exe.config
+D:\Projects\LPS Project\MailMerger\MailMergeService\bin\Debug\MailMergeService.exe
+D:\Projects\LPS Project\MailMerger\MailMergeService\bin\Debug\MailMergeService.pdb
+D:\Projects\LPS Project\MailMerger\MailMergeService\bin\Debug\Ionic.Zip.dll
+D:\Projects\LPS Project\MailMerger\MailMergeService\bin\Debug\itextsharp.dll
+D:\Projects\LPS Project\MailMerger\MailMergeService\obj\x86\Debug\MailMergeService.MergeService.resources
+D:\Projects\LPS Project\MailMerger\MailMergeService\obj\x86\Debug\MailMergeService.ProjectInstaller.resources
+D:\Projects\LPS Project\MailMerger\MailMergeService\obj\x86\Debug\MailMergeService.csproj.GenerateResource.Cache
+D:\Projects\LPS Project\MailMerger\MailMergeService\obj\x86\Debug\MailMergeService.exe
+D:\Projects\LPS Project\MailMerger\MailMergeService\obj\x86\Debug\MailMergeService.pdb
+D:\Projects\LPS\Web\MailMerger\MailMergeService\bin\Debug\MailMergeService.exe.config
+D:\Projects\LPS\Web\MailMerger\MailMergeService\bin\Debug\MailMergeService.exe
+D:\Projects\LPS\Web\MailMerger\MailMergeService\bin\Debug\MailMergeService.pdb
+D:\Projects\LPS\Web\MailMerger\MailMergeService\bin\Debug\Ionic.Zip.dll
+D:\Projects\LPS\Web\MailMerger\MailMergeService\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\Projects\LPS\Web\MailMerger\MailMergeService\obj\x86\Debug\MailMergeService.MergeService.resources
+D:\Projects\LPS\Web\MailMerger\MailMergeService\obj\x86\Debug\MailMergeService.ProjectInstaller.resources
+D:\Projects\LPS\Web\MailMerger\MailMergeService\obj\x86\Debug\GenerateResource.read.1.tlog
+D:\Projects\LPS\Web\MailMerger\MailMergeService\obj\x86\Debug\GenerateResource.write.1.tlog
+D:\Projects\LPS\Web\MailMerger\MailMergeService\obj\x86\Debug\MailMergeService.exe
+D:\Projects\LPS\Web\MailMerger\MailMergeService\obj\x86\Debug\MailMergeService.pdb
+D:\Projects\lps\MailMerger\MailMergeService\bin\Debug\MailMergeService.exe.config
+D:\Projects\lps\MailMerger\MailMergeService\bin\Debug\MailMergeService.exe
+D:\Projects\lps\MailMerger\MailMergeService\bin\Debug\MailMergeService.pdb
+D:\Projects\lps\MailMerger\MailMergeService\bin\Debug\Ionic.Zip.dll
+D:\Projects\lps\MailMerger\MailMergeService\obj\x86\Debug\MailMergeService.MergeService.resources
+D:\Projects\lps\MailMerger\MailMergeService\obj\x86\Debug\MailMergeService.ProjectInstaller.resources
+D:\Projects\lps\MailMerger\MailMergeService\obj\x86\Debug\MailMergeService.csproj.GenerateResource.Cache
+D:\Projects\lps\MailMerger\MailMergeService\obj\x86\Debug\MailMergeService.exe
+D:\Projects\lps\MailMerger\MailMergeService\obj\x86\Debug\MailMergeService.pdb
+D:\Projects\lps\MailMerger\MailMergeService\obj\x86\Debug\MailMergeService.csprojResolveAssemblyReference.cache
+D:\Back Up Projects\LPS\MailMerger\MailMergeService\bin\Debug\MailMergeService.exe.config
+D:\Back Up Projects\LPS\MailMerger\MailMergeService\bin\Debug\MailMergeService.exe
+D:\Back Up Projects\LPS\MailMerger\MailMergeService\bin\Debug\MailMergeService.pdb
+D:\Back Up Projects\LPS\MailMerger\MailMergeService\bin\Debug\Ionic.Zip.dll
+D:\Back Up Projects\LPS\MailMerger\MailMergeService\obj\x86\Debug\MailMergeService.csprojResolveAssemblyReference.cache
+D:\Back Up Projects\LPS\MailMerger\MailMergeService\obj\x86\Debug\MailMergeService.MergeService.resources
+D:\Back Up Projects\LPS\MailMerger\MailMergeService\obj\x86\Debug\MailMergeService.ProjectInstaller.resources
+D:\Back Up Projects\LPS\MailMerger\MailMergeService\obj\x86\Debug\MailMergeService.csproj.GenerateResource.Cache
+D:\Back Up Projects\LPS\MailMerger\MailMergeService\obj\x86\Debug\MailMergeService.exe
+D:\Back Up Projects\LPS\MailMerger\MailMergeService\obj\x86\Debug\MailMergeService.pdb
+F:\Dropbox\Project Folder\Together-lps-576c7ec042f6\MailMerger\MailMergeService\bin\Debug\MailMergeService.exe.config
+F:\Dropbox\Project Folder\Together-lps-576c7ec042f6\MailMerger\MailMergeService\bin\Debug\MailMergeService.exe
+F:\Dropbox\Project Folder\Together-lps-576c7ec042f6\MailMerger\MailMergeService\bin\Debug\MailMergeService.pdb
+F:\Dropbox\Project Folder\Together-lps-576c7ec042f6\MailMerger\MailMergeService\bin\Debug\Ionic.Zip.dll
+F:\Dropbox\Project Folder\Together-lps-576c7ec042f6\MailMerger\MailMergeService\obj\x86\Debug\MailMergeService.MergeService.resources
+F:\Dropbox\Project Folder\Together-lps-576c7ec042f6\MailMerger\MailMergeService\obj\x86\Debug\MailMergeService.ProjectInstaller.resources
+F:\Dropbox\Project Folder\Together-lps-576c7ec042f6\MailMerger\MailMergeService\obj\x86\Debug\MailMergeService.csproj.GenerateResource.Cache
+F:\Dropbox\Project Folder\Together-lps-576c7ec042f6\MailMerger\MailMergeService\obj\x86\Debug\MailMergeService.exe
+F:\Dropbox\Project Folder\Together-lps-576c7ec042f6\MailMerger\MailMergeService\obj\x86\Debug\MailMergeService.pdb
+F:\Dropbox\Project Folder\Together-lps-576c7ec042f6\MailMerger\MailMergeService\obj\x86\Debug\MailMergeService.csprojResolveAssemblyReference.cache
+G:\Dropbox\Project Folder\Together-lps-576c7ec042f6\MailMerger\MailMergeService\bin\Debug\MailMergeService.exe.config
+G:\Dropbox\Project Folder\Together-lps-576c7ec042f6\MailMerger\MailMergeService\bin\Debug\MailMergeService.exe
+G:\Dropbox\Project Folder\Together-lps-576c7ec042f6\MailMerger\MailMergeService\bin\Debug\MailMergeService.pdb
+G:\Dropbox\Project Folder\Together-lps-576c7ec042f6\MailMerger\MailMergeService\bin\Debug\Ionic.Zip.dll
+G:\Dropbox\Project Folder\Together-lps-576c7ec042f6\MailMerger\MailMergeService\obj\x86\Debug\MailMergeService.MergeService.resources
+G:\Dropbox\Project Folder\Together-lps-576c7ec042f6\MailMerger\MailMergeService\obj\x86\Debug\MailMergeService.ProjectInstaller.resources
+G:\Dropbox\Project Folder\Together-lps-576c7ec042f6\MailMerger\MailMergeService\obj\x86\Debug\MailMergeService.csproj.GenerateResource.Cache
+G:\Dropbox\Project Folder\Together-lps-576c7ec042f6\MailMerger\MailMergeService\obj\x86\Debug\MailMergeService.exe
+G:\Dropbox\Project Folder\Together-lps-576c7ec042f6\MailMerger\MailMergeService\obj\x86\Debug\MailMergeService.pdb
+G:\Dropbox\Project Folder\Together-lps-576c7ec042f6\MailMerger\MailMergeService\obj\x86\Debug\MailMergeService.csprojResolveAssemblyReference.cache
+C:\Users\Leo\Dropbox (Personal)\Project Folder\MailMerger\MailMergeService\bin\Debug\MailMergeService.exe.config
+C:\Users\Leo\Dropbox (Personal)\Project Folder\MailMerger\MailMergeService\bin\Debug\MailMergeService.exe
+C:\Users\Leo\Dropbox (Personal)\Project Folder\MailMerger\MailMergeService\bin\Debug\MailMergeService.pdb
+C:\Users\Leo\Dropbox (Personal)\Project Folder\MailMerger\MailMergeService\bin\Debug\Ionic.Zip.dll
+C:\Users\Leo\Dropbox (Personal)\Project Folder\MailMerger\MailMergeService\obj\x86\Debug\MailMergeService.MergeService.resources
+C:\Users\Leo\Dropbox (Personal)\Project Folder\MailMerger\MailMergeService\obj\x86\Debug\MailMergeService.ProjectInstaller.resources
+C:\Users\Leo\Dropbox (Personal)\Project Folder\MailMerger\MailMergeService\obj\x86\Debug\MailMergeService.csproj.GenerateResource.Cache
+C:\Users\Leo\Dropbox (Personal)\Project Folder\MailMerger\MailMergeService\obj\x86\Debug\MailMergeService.exe
+C:\Users\Leo\Dropbox (Personal)\Project Folder\MailMerger\MailMergeService\obj\x86\Debug\MailMergeService.pdb
+C:\Users\Leo\Dropbox (Personal)\Project Folder\MailMerger\MailMergeService\obj\x86\Debug\MailMergeService.csprojResolveAssemblyReference.cache

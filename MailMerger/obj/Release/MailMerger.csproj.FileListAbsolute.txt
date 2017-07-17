@@ -1,0 +1,14 @@
+F:\Dropbox\Project Folder\Together-lps-576c7ec042f6\MailMerger\MailMerger\bin\MailMerger.dll.config
+F:\Dropbox\Project Folder\Together-lps-576c7ec042f6\MailMerger\MailMerger\bin\MailMerger.dll
+F:\Dropbox\Project Folder\Together-lps-576c7ec042f6\MailMerger\MailMerger\bin\MailMerger.pdb
+F:\Dropbox\Project Folder\Together-lps-576c7ec042f6\MailMerger\MailMerger\bin\Ionic.Zip.dll
+F:\Dropbox\Project Folder\Together-lps-576c7ec042f6\MailMerger\MailMerger\obj\Release\MailMerger.csprojResolveAssemblyReference.cache
+F:\Dropbox\Project Folder\Together-lps-576c7ec042f6\MailMerger\MailMerger\obj\Release\MailMerger.dll
+F:\Dropbox\Project Folder\Together-lps-576c7ec042f6\MailMerger\MailMerger\obj\Release\MailMerger.pdb
+G:\Dropbox\Project Folder\Together-lps-576c7ec042f6\MailMerger\MailMerger\bin\MailMerger.dll.config
+G:\Dropbox\Project Folder\Together-lps-576c7ec042f6\MailMerger\MailMerger\bin\MailMerger.dll
+G:\Dropbox\Project Folder\Together-lps-576c7ec042f6\MailMerger\MailMerger\bin\MailMerger.pdb
+G:\Dropbox\Project Folder\Together-lps-576c7ec042f6\MailMerger\MailMerger\bin\Ionic.Zip.dll
+G:\Dropbox\Project Folder\Together-lps-576c7ec042f6\MailMerger\MailMerger\obj\Release\MailMerger.csprojResolveAssemblyReference.cache
+G:\Dropbox\Project Folder\Together-lps-576c7ec042f6\MailMerger\MailMerger\obj\Release\MailMerger.dll
+G:\Dropbox\Project Folder\Together-lps-576c7ec042f6\MailMerger\MailMerger\obj\Release\MailMerger.pdb
