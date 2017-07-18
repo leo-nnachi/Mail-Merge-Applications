@@ -78,3 +78,13 @@ C:\Users\Leo\Dropbox (Personal)\Project Folder\MailMerger\MailMergeService\obj\x
 C:\Users\Leo\Dropbox (Personal)\Project Folder\MailMerger\MailMergeService\obj\x86\Debug\MailMergeService.exe
 C:\Users\Leo\Dropbox (Personal)\Project Folder\MailMerger\MailMergeService\obj\x86\Debug\MailMergeService.pdb
 C:\Users\Leo\Dropbox (Personal)\Project Folder\MailMerger\MailMergeService\obj\x86\Debug\MailMergeService.csprojResolveAssemblyReference.cache
+C:\Users\Leo\Dropbox (Personal)\Git Repos\Mail Merger Applications\Mail-Merge-Applications\MailMergeService\bin\Debug\MailMergeService.exe.config
+C:\Users\Leo\Dropbox (Personal)\Git Repos\Mail Merger Applications\Mail-Merge-Applications\MailMergeService\obj\x86\Debug\MailMergeService.exe
+C:\Users\Leo\Dropbox (Personal)\Git Repos\Mail Merger Applications\Mail-Merge-Applications\MailMergeService\obj\x86\Debug\MailMergeService.pdb
+C:\Users\Leo\Dropbox (Personal)\Git Repos\Mail Merger Applications\Mail-Merge-Applications\MailMergeService\bin\Debug\MailMergeService.exe
+C:\Users\Leo\Dropbox (Personal)\Git Repos\Mail Merger Applications\Mail-Merge-Applications\MailMergeService\bin\Debug\MailMergeService.pdb
+C:\Users\Leo\Dropbox (Personal)\Git Repos\Mail Merger Applications\Mail-Merge-Applications\MailMergeService\bin\Debug\Ionic.Zip.dll
+C:\Users\Leo\Dropbox (Personal)\Git Repos\Mail Merger Applications\Mail-Merge-Applications\MailMergeService\obj\x86\Debug\MailMergeService.csprojResolveAssemblyReference.cache
+C:\Users\Leo\Dropbox (Personal)\Git Repos\Mail Merger Applications\Mail-Merge-Applications\MailMergeService\obj\x86\Debug\MailMergeService.MergeService.resources
+C:\Users\Leo\Dropbox (Personal)\Git Repos\Mail Merger Applications\Mail-Merge-Applications\MailMergeService\obj\x86\Debug\MailMergeService.ProjectInstaller.resources
+C:\Users\Leo\Dropbox (Personal)\Git Repos\Mail Merger Applications\Mail-Merge-Applications\MailMergeService\obj\x86\Debug\MailMergeService.csproj.GenerateResource.Cache

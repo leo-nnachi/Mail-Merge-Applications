@@ -332,9 +332,7 @@ namespace MailMerger
         {
             try
             {
-                //TODO Send Meesage to Database table for queueing. Best to add the whole string to a single field so that it isn't restricted if fields need to be added later
-                // could add individual fields for databse and user, for display purpose
-                DatabaseInfo.UpdateMailMergeQueue(0,
+             DatabaseInfo.AddtoMailMergeQueue(0,
                     _formatPath + ";" + _dataSourcePath + ";" + _totalRecords + ";" +
                     _email + ";" + _documentType + ";"
                     + _cbChecked + ";" + _prefix + ";" + _field1 +
@@ -343,7 +341,7 @@ namespace MailMerger
                     currentDbase.database_name,
                     "",
                     "",
-                    currentDbase);
+                    currentDbase, _totalRecords);
 
                 SendMessageToQueue(_formatPath + ";" + _dataSourcePath + ";" + _totalRecords + ";" +
                                    _email + ";" + _documentType + ";"

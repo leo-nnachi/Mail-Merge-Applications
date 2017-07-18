@@ -81,15 +81,14 @@ namespace MailMerger
             return result.Tables[0];
         }
 
-        public static void UpdateMailMergeQueue(int status, string request_string, string pid_id, string message, DatabaseInfo dbase)
+        public static void AddtoMailMergeQueue(int status, string request_string, string pid_id, string message, DatabaseInfo dbase, int total_records)
         {
 
             DataSet result = new DataSet();// = string.Empty;
-
             SqlConnection sqlConnection = new SqlConnection(ConfigurationManager.ConnectionStrings["dbaseConnection"].ToString());
             sqlConnection.Open();
             SqlDataAdapter dataAdapter = new SqlDataAdapter();
-            SqlCommand select = new SqlCommand("updateMailMergeQueue");
+            SqlCommand select = new SqlCommand("AddtoMailMergeQueue");
             @select.CommandType = CommandType.StoredProcedure;
             @select.Connection = sqlConnection;
             dataAdapter.SelectCommand = @select;
@@ -99,6 +98,7 @@ namespace MailMerger
             @select.Parameters.AddWithValue("@pid_id", pid_id);
             @select.Parameters.AddWithValue("@message", message);
             @select.Parameters.AddWithValue("@database_name", dbase.database_name);
+            @select.Parameters.AddWithValue("@total_records", total_records);
             
             select.ExecuteNonQuery();
        }

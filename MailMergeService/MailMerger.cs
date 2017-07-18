@@ -29,6 +29,7 @@ using Microsoft.Office.Interop.Word;
 
 using iTextSharp.text.pdf;
 using System.Configuration;
+using System.Data;
 using System.Text;
 using System.Threading;
 using System.Diagnostics;
@@ -69,6 +70,7 @@ namespace MailMergeService
         #region Singleton
 
         private static MailMerger _merger;
+
         public static MailMerger Merger
         {
             get
@@ -77,26 +79,34 @@ namespace MailMergeService
                 {
                     _merger = new MailMerger();
 
-                } return _merger;
+                }
+                return _merger;
 
             }
         }
+
         private void MergeMail()
         {
         }
+
         #endregion
 
 
-        public void MergeMailWithMultipleRecords(string formatPath, string dataSourcePath, int totalRecords, string email, string _documentType, bool _cbChecked, string _prefix
-            , string _field1, string _field2, string _field3, string _field4, string _field5, string _suffix, string _delimiter,string dbase)
+        public void MergeMailWithMultipleRecords(string formatPath, string dataSourcePath, int totalRecords,
+            string email, string _documentType, bool _cbChecked, string _prefix
+            , string _field1, string _field2, string _field3, string _field4, string _field5, string _suffix,
+            string _delimiter, string dbase, DataRow row)
         {
 
+            DatabaseInfo.UpdateMailMergeQueue(Convert.ToInt32(row["request_string"].ToString()), 1, row["request_string"].ToString(), row["request_string"].ToString(),0);
             var currentDbase = Dbase.dbase(dbase);
             string FinalDocs = currentDbase.zip_path;
             string zipFilePath = currentDbase.merge_working_path;
             _datasourceTxt = dataSourcePath;
             tempSourcePath = dataSourcePath;
-            this.Log("Started:" + formatPath + ";" + dataSourcePath + ";" + totalRecords + ";" + email + ";" + _documentType, EventLogEntryType.Information);
+            this.Log(
+                "Started:" + formatPath + ";" + dataSourcePath + ";" + totalRecords + ";" + email + ";" + _documentType,
+                EventLogEntryType.Information);
             Running = true;
             startTime = DateTime.Now;
             List<string> array = new List<string>();
@@ -107,7 +117,7 @@ namespace MailMergeService
             object SaveChanges = false;
             string finalFilePath = "";
             int startingRecord = 1, endingRecord = 1;
-           // string time = "";
+            // string time = "";
             int counter = 1;
 
             if (_cbChecked)
@@ -116,7 +126,7 @@ namespace MailMergeService
                 RecoredSize = Convert.ToInt32(ConfigurationManager.AppSettings["RecordSize"]);
 
             string fileNamePrefix = "";
-    
+
 
             try
             {
@@ -127,19 +137,21 @@ namespace MailMergeService
 
 
                 #region . clean the data .
+
                 writeError("Open Data Source File to read.");
-                string data = File.ReadAllText(_datasourceTxt ,Encoding.Default );
+                string data = File.ReadAllText(_datasourceTxt, Encoding.Default);
                 //int count = data.Split();
 
                 File.WriteAllText(dataSourcePath, data.Trim(), Encoding.Default);
                 writeError("Close Data Source File.");
 
                 string[] allLines = File.ReadAllLines(_datasourceTxt);
+
                 #endregion
 
                 #region
 
-            //    if (_cbChecked)
+                //    if (_cbChecked)
                 {
                     string dataSourceCopyPath = zipFilePath + "datasource_copy.txt";
                     TextWriter writer = new StreamWriter(dataSourceCopyPath);
@@ -164,40 +176,41 @@ namespace MailMergeService
                 try
                 {
                     List<string> delimitersList = new List<string>()
-                                                      {"|",
-                                                          "\r\n",
-                                                          "\t",
-                                                          ",",
-                                                          ".",
-                                                          "!",
-                                                          "#",
-                                                          "$",
-                                                          "%",
-                                                          "&",
-                                                          "(",
-                                                          ")",
-                                                          "+",
-                                                          "*",                                                         
-                                                          "/",
-                                                          ":",
-                                                          ";",
-                                                          "<",
-                                                          "=",
-                                                          ">",
-                                                          "?",
-                                                          "@",
-                                                          "[",
-                                                          "]",
-                                                          "^",                                                         
-                                                          "`",
-                                                          "{",
-                                                          "}",
-                                                          
-                                                           "-",
-                                                            "_",
-                                                          "~"
-                                                      };
-                
+                    {
+                        "|",
+                        "\r\n",
+                        "\t",
+                        ",",
+                        ".",
+                        "!",
+                        "#",
+                        "$",
+                        "%",
+                        "&",
+                        "(",
+                        ")",
+                        "+",
+                        "*",
+                        "/",
+                        ":",
+                        ";",
+                        "<",
+                        "=",
+                        ">",
+                        "?",
+                        "@",
+                        "[",
+                        "]",
+                        "^",
+                        "`",
+                        "{",
+                        "}",
+
+                        "-",
+                        "_",
+                        "~"
+                    };
+
                     if (allLines.Length >= 2)
                     {
                         string fieldLine = allLines[0];
@@ -245,26 +258,45 @@ namespace MailMergeService
 
                 startingRecord = 1;
                 bool fieldsVerified = false;
-                if (totalRecords > RecoredSize) 
+                if (totalRecords > RecoredSize)
                     endingRecord = RecoredSize;
-                else 
+                else
                     endingRecord = totalRecords;
 
-                while (endingRecord <= totalRecords && totalRecords>0)
+
+
+                while (endingRecord <= totalRecords && totalRecords > 0)
                 {
                     fileNamePrefix = "";
 
-                   
+
 
                     var oMissing = OMissing(ref dataSourcePath);
 
                     try
                     {
+
+                        string AppId = path;
+
                         wrdApp = new Application();
+                        wrdApp.Application.Caption = AppId;
                         wrdApp.Options.SaveNormalPrompt = false;
                         wrdApp.Options.SavePropertiesPrompt = false;
                         wrdApp.DisplayAlerts = Word.WdAlertLevel.wdAlertsNone;
-                        // Create an instance of Word and make it visible.
+
+                        ///Get the pid by for word application
+                        var WordPid = GetProcessIdByWindowTitle(AppId);
+                        writeError("Attempting to find PID");
+                        while (GetProcessIdByWindowTitle(AppId) == Int32.MaxValue) //Loop till u get
+                        {
+                            Thread.Sleep(5);
+                        }
+
+                        WordPid = GetProcessIdByWindowTitle(AppId);
+                        writeError("PiD - " + WordPid);
+                        DatabaseInfo.UpdateMailMergeQueue(Convert.ToInt32(row["request_string"].ToString()), 1, row["request_string"].ToString(), row["request_string"].ToString(), WordPid);
+
+                        wrdApp.Application.Visible = false;
                         wrdApp.Visible = false;
                         writeError("Initiate New Word Application.");
                     }
@@ -318,8 +350,8 @@ namespace MailMergeService
                                     {
                                         if (item.Contains("\\"))
                                         {
-                                            string[] parts = item.Split(new string[] { "\\" },
-                                                                        StringSplitOptions.RemoveEmptyEntries);
+                                            string[] parts = item.Split(new string[] {"\\"},
+                                                StringSplitOptions.RemoveEmptyEntries);
                                             if (parts.Length > 0)
                                                 item = parts[0].TrimEnd(' ');
                                         }
@@ -332,31 +364,33 @@ namespace MailMergeService
                                 bool fieldException = false;
                                 var fieldExceptions = new List<string>();
                                 for (int i = 0; i < templateList.Count; i++)
+                                {
+                                    if (!sourceList.Contains(templateList[i]))
                                     {
-                                        if (!sourceList.Contains(templateList[i]))
-                                        {
-                                            fieldExceptions.Add(templateList[i]);
-                                            fieldException = true;
-                                        }
+                                        fieldExceptions.Add(templateList[i]);
+                                        fieldException = true;
                                     }
+                                }
                                 if (fieldException)
                                 {
                                     wrdDoc.Close(ref oFalse, ref oMissing, ref oMissing);
                                     wrdDoc = null;
-                                    writeError("Merge fields used in the template document does not exist in the data source. Your file could not be created. ");
+                                    writeError(
+                                        "Merge fields used in the template document does not exist in the data source. Your file could not be created. ");
                                     var exceptionlist = "<br/>";
                                     foreach (string field in fieldExceptions)
                                     {
                                         exceptionlist = exceptionlist + field + "<br/>";
                                     }
 
-                                    throw new Exception("Merge fields used in the template document listed do not exist in the data source." + exceptionlist + "Your file couldn't be created");
+                                    throw new Exception(
+                                        "Merge fields used in the template document listed do not exist in the data source." +
+                                        exceptionlist + "Your file couldn't be created");
                                 }
 
                                 fieldsVerified = true;
                             }
-
-
+                            
                             wrdMailMerge.OpenDataSource(dataSourcePath);
 
 
@@ -366,7 +400,7 @@ namespace MailMergeService
                                 MailMergeFields template = wrdMailMerge.Fields;
                                 List<string> sourceList = new List<string>();
                                 List<string> templateList = new List<string>();
-                                
+
                                 foreach (MailMergeFieldName mailMergeFieldName in source)
                                 {
                                     sourceList.Add(mailMergeFieldName.Name.ToLower());
@@ -381,7 +415,8 @@ namespace MailMergeService
                                     {
                                         if (item.Contains("\\"))
                                         {
-                                            string[] parts = item.Split(new string[] {"\\"},StringSplitOptions.RemoveEmptyEntries);
+                                            string[] parts = item.Split(new string[] {"\\"},
+                                                StringSplitOptions.RemoveEmptyEntries);
                                             if (parts.Length > 0)
                                                 item = parts[0].TrimEnd(' ');
                                         }
@@ -410,8 +445,12 @@ namespace MailMergeService
                                     {
                                         exceptionlist = exceptionlist + field + "<br/>";
                                     }
-                                    writeError("Merge fields used in the template document listed do not exist in the data source." + exceptionlist + "Your file couldn't be created");
-                                    throw new Exception("Merge fields used in the template document listed do not exist in the data source." + exceptionlist + "Your file couldn't be created");
+                                    writeError(
+                                        "Merge fields used in the template document listed do not exist in the data source." +
+                                        exceptionlist + "Your file couldn't be created");
+                                    throw new Exception(
+                                        "Merge fields used in the template document listed do not exist in the data source." +
+                                        exceptionlist + "Your file couldn't be created");
                                 }
 
                                 fieldsVerified = true;
@@ -462,25 +501,25 @@ namespace MailMergeService
 
                                 if (!string.IsNullOrEmpty(_field1))
                                     fileNamePrefix += fields.ContainsKey(_field1)
-                                                          ? _delimiter + fields[_field1]
-                                                          : string.Empty;
+                                        ? _delimiter + fields[_field1]
+                                        : string.Empty;
 
                                 if (!string.IsNullOrEmpty(_field2))
                                     fileNamePrefix += fields.ContainsKey(_field2)
-                                                          ? _delimiter + fields[_field2]
-                                                          : string.Empty;
+                                        ? _delimiter + fields[_field2]
+                                        : string.Empty;
                                 if (!string.IsNullOrEmpty(_field3))
                                     fileNamePrefix += fields.ContainsKey(_field3)
-                                                          ? _delimiter + fields[_field3]
-                                                          : string.Empty;
+                                        ? _delimiter + fields[_field3]
+                                        : string.Empty;
                                 if (!string.IsNullOrEmpty(_field4))
                                     fileNamePrefix += fields.ContainsKey(_field4)
-                                                          ? _delimiter + fields[_field4]
-                                                          : string.Empty;
+                                        ? _delimiter + fields[_field4]
+                                        : string.Empty;
                                 if (!string.IsNullOrEmpty(_field5))
                                     fileNamePrefix += fields.ContainsKey(_field5)
-                                                          ? _delimiter + fields[_field5]
-                                                          : string.Empty;
+                                        ? _delimiter + fields[_field5]
+                                        : string.Empty;
 
 
                                 if (!String.IsNullOrEmpty(_suffix))
@@ -497,7 +536,7 @@ namespace MailMergeService
                                 {
                                     if (_cbChecked)
                                         fileNamePrefix = fileNamePrefix.Replace(invalidFileNameChars[i].ToString(),
-                                                                                _delimiter);
+                                            _delimiter);
                                     else
                                         fileNamePrefix = fileNamePrefix.Replace(invalidFileNameChars[i].ToString(), "_");
                                 }
@@ -508,14 +547,14 @@ namespace MailMergeService
                             {
                                 if (fileNamePrefix == "")
                                     fileNamePrefix = "PDF";
-            
+
                                 newPath = zipFilePath + fileNamePrefix + counter + ".pdf";
                             }
                             else if (_documentType == wordDocument)
                             {
                                 if (fileNamePrefix == "")
                                     fileNamePrefix = "Word";
-        
+
                                 newPath = zipFilePath + fileNamePrefix + counter + ".doc";
                             }
 
@@ -531,8 +570,10 @@ namespace MailMergeService
                                 wrdApp.ActiveDocument.ShowSpellingErrors = false;
 
                                 if (_documentType == pdfDocument)
-                                    item.ExportAsFixedFormat(newPath, Word.WdExportFormat.wdExportFormatPDF, false,
-                                                             WdExportOptimizeFor.wdExportOptimizeForPrint);
+                                    item.ExportAsFixedFormat(newPath,
+                                        Word.WdExportFormat.wdExportFormatPDF,
+                                        false,
+                                        WdExportOptimizeFor.wdExportOptimizeForPrint);
                                 else if (_documentType == wordDocument)
                                     item.SaveAs(newPath, Word.WdSaveFormat.wdFormatDocument);
 
@@ -553,7 +594,9 @@ namespace MailMergeService
                                 using (MemoryStream m = new MemoryStream())
                                 {
                                     PdfStamper stamper = new PdfStamper(
-                                        reader, m, PdfWriter.VERSION_1_5
+                                        reader,
+                                        m,
+                                        PdfWriter.VERSION_1_5
                                         );
 
                                     stamper.Writer.CompressionLevel = PdfStream.BEST_COMPRESSION;
@@ -578,30 +621,32 @@ namespace MailMergeService
 
                             #region . Remove Rows .
 
-                            List<string> quotelist = File.ReadAllLines(_datasourceTxt,Encoding.Default ).ToList();
+                            List<string> quotelist = File.ReadAllLines(_datasourceTxt, Encoding.Default).ToList();
                             string firstItem = quotelist[0];
-                          //  quotelist.RemoveRange(1, 1);
+                            //  quotelist.RemoveRange(1, 1);
                             if (RecoredSize < quotelist.Count)
                                 quotelist.RemoveRange(1, RecoredSize);
                             else
-                                quotelist.RemoveRange(1,quotelist.Count-1);
+                                quotelist.RemoveRange(1, quotelist.Count - 1);
 
-                          
-                                totalRecords = quotelist.Count - 1;
-                          
+
+                            totalRecords = quotelist.Count - 1;
+
 
                             File.WriteAllLines(_datasourceTxt, quotelist.ToArray(), Encoding.Default);
                             writeError("Source Line Removed.");
+
                             #endregion
+
                             if (totalRecords > RecoredSize)
                                 endingRecord = RecoredSize;
                             else endingRecord = totalRecords;
-                           // if ((endingRecord + RecoredSize) >= totalRecords) endingRecord = totalRecords;
+                            // if ((endingRecord + RecoredSize) >= totalRecords) endingRecord = totalRecords;
                         }
                         catch (Exception docEx)
                         {
                             writeError(docEx.Message);
-                         //   sendEmail(email, docEx.Message + "\n\n" + docEx.StackTrace.ToString());
+                            //   sendEmail(email, docEx.Message + "\n\n" + docEx.StackTrace.ToString());
                             sendEmail(email, docEx.Message);
                             throw docEx;
                         }
@@ -614,7 +659,7 @@ namespace MailMergeService
 
 
                     CleanUp();
-
+                    DatabaseInfo.UpdateMailMergeQueue(Convert.ToInt32(row["request_string"].ToString()), 2, row["request_string"].ToString(), row["request_string"].ToString(),counter);
                     counter++;
                 }
 
@@ -656,7 +701,7 @@ namespace MailMergeService
                     sendemail(email, finalFilePath, tSpend.TotalSeconds);
                 writeError("Please check the provided email inbox for merge results");
             }
-            //fix for LPS-318
+                //fix for LPS-318
             catch (System.Threading.ThreadAbortException ex)
             {
                 writeError("LPS-318 aborted exception");
@@ -665,22 +710,20 @@ namespace MailMergeService
             }
             catch (System.Runtime.InteropServices.COMException comException)
             {
-                writeError("Com Exception");
+                writeError("Com Exception - " + comException.ToString());
                 //do nothing
                 //Catch command failed exception while opening a word document
             }
             catch (Exception oEx)
             {
-               
-                sendEmail(email, oEx.Message + "\n\n" + oEx.StackTrace.ToString()); 
-                
+
+                sendEmail(email, oEx.Message + "\n\n" + oEx.StackTrace.ToString());
+
             }
             finally
             {
                 try
                 {
-                   
-                    // this.Log("Ended:" + formatPath + ";" + dataSourcePath + ";" + totalRecords + ";" + email + ";" + _documentType, EventLogEntryType.Information);
                     CleanUp();
                     // Release References.
                     wrdSelection = null;
@@ -724,9 +767,22 @@ namespace MailMergeService
 
             object oMissing = System.Reflection.Missing.Value;
 
-            wrdDoc2 = wrdApp2.Documents.Open(_datasourceTxt, false, true, ref oMissing, ref oMissing, ref oMissing, ref oMissing,
-                ref oMissing, ref oMissing, ref oMissing, WdOpenFormat.wdOpenFormatText, ref oMissing,
-                ref oMissing, ref oMissing, ref oMissing, ref oMissing);
+            wrdDoc2 = wrdApp2.Documents.Open(_datasourceTxt,
+                false,
+                true,
+                ref oMissing,
+                ref oMissing,
+                ref oMissing,
+                ref oMissing,
+                ref oMissing,
+                ref oMissing,
+                ref oMissing,
+                WdOpenFormat.wdOpenFormatText,
+                ref oMissing,
+                ref oMissing,
+                ref oMissing,
+                ref oMissing,
+                ref oMissing);
 
             dataSourcePath = _datasourceTxt.Substring(0, _datasourceTxt.Length - 3) + "doc";
             try
@@ -737,9 +793,22 @@ namespace MailMergeService
             {
                 writeError("Error Trying to Delete Source File Doc");
             }
-            wrdDoc2.SaveAs(dataSourcePath, WdSaveFormat.wdFormatDocument, ref oMissing, ref oMissing,
-                ref oMissing, ref oMissing, ref oMissing, ref oMissing, ref oMissing, ref oMissing,
-                ref oMissing, ref oMissing, ref oMissing, ref oMissing, ref oMissing, ref oMissing);
+            wrdDoc2.SaveAs(dataSourcePath,
+                WdSaveFormat.wdFormatDocument,
+                ref oMissing,
+                ref oMissing,
+                ref oMissing,
+                ref oMissing,
+                ref oMissing,
+                ref oMissing,
+                ref oMissing,
+                ref oMissing,
+                ref oMissing,
+                ref oMissing,
+                ref oMissing,
+                ref oMissing,
+                ref oMissing,
+                ref oMissing);
 
             wrdDoc2.Close();
             try
@@ -768,27 +837,27 @@ namespace MailMergeService
             writeError("File Email called" + path);
             if (ConfigurationManager.AppSettings["SendEmail"].ToString() == "1")
             {
-            System.Net.Mail.MailMessage message = new System.Net.Mail.MailMessage();
-            string emailFrom = ConfigurationManager.AppSettings["emailFrom"];
-            message.From = new MailAddress(emailFrom);
-            message.To.Add(email);
-            string emails = ConfigurationManager.AppSettings["emailTo"];
+                System.Net.Mail.MailMessage message = new System.Net.Mail.MailMessage();
+                string emailFrom = ConfigurationManager.AppSettings["emailFrom"];
+                message.From = new MailAddress(emailFrom);
+                message.To.Add(email);
+                string emails = ConfigurationManager.AppSettings["emailTo"];
 
-            foreach (var item in emails.Split(",".ToCharArray()))
-            {
-                message.Bcc.Add(item);
+                foreach (var item in emails.Split(",".ToCharArray()))
+                {
+                    message.Bcc.Add(item);
+                }
+                message.IsBodyHtml = true;
+                string pathFile = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "EmailHeader.txt");
+                StreamReader objStreamReader = File.OpenText(pathFile);
+                string subject = objStreamReader.ReadLine();
+                message.Subject = subject;
+                string content = ReadFile("EmailTemplate.htm");
+                message.Body = content.Replace("#path#", path).Replace("#ExecutionTime#", time.ToString());
+                SmtpClient client = new SmtpClient();
+                client.Send(message);
+                writeError("Error Email sent");
             }
-            message.IsBodyHtml = true;
-            string pathFile = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "EmailHeader.txt");
-            StreamReader objStreamReader = File.OpenText(pathFile);
-            string subject = objStreamReader.ReadLine();
-            message.Subject = subject;
-            string content = ReadFile("EmailTemplate.htm");
-            message.Body = content.Replace("#path#", path).Replace("#ExecutionTime#", time.ToString());
-            SmtpClient client = new SmtpClient();
-            client.Send(message);
-            writeError("Error Email sent");
-        }
         }
 
         private void sendEmail(string email, string errMessage)
@@ -819,7 +888,7 @@ namespace MailMergeService
             }
         }
 
-       public static string ReadFile(string FileName)
+        public static string ReadFile(string FileName)
         {
             try
             {
@@ -833,7 +902,7 @@ namespace MailMergeService
 
             }
             return "";
-        } 
+        }
 
         public void CleanUp()
         {
@@ -860,8 +929,9 @@ namespace MailMergeService
             {
                 throw new Exception(ex.Message);
             }
-           
+
         }
+
         void Log(string sEvent, EventLogEntryType type)
         {
             string sSource = "LPMailMergeService";
@@ -870,86 +940,50 @@ namespace MailMergeService
             if (!EventLog.SourceExists(sSource))
                 EventLog.CreateEventSource(sSource, sLog);
 
-            EventLog.WriteEntry(sSource, sEvent,
+            EventLog.WriteEntry(sSource,
+                sEvent,
                 type);
         }
 
         public void Run()
         {
-            Running = true;
-            MessageQueue msMq;// = msMq = new MessageQueue(queueName);
-            if (!MessageQueue.Exists(queueName))
-            {
-                msMq = MessageQueue.Create(queueName);
-            }
-            else
-            {
-                msMq = new MessageQueue(queueName);
-            }
 
-            try
+            Running = true;
+
+            var dtQueue = DatabaseInfo.getNewQueueItems();
+
+            if (dtQueue != null)
             {
-                while (msMq.GetAllMessages().Count() > 0)
+                foreach (DataRow row in dtQueue.Rows)
                 {
-                    var item = msMq.Receive();
-                    item.Formatter = new XmlMessageFormatter(new Type[] { typeof(string) });
-                    var message = item.Body.ToString().Split(";".ToCharArray());
+                    var item = row["request_string"].ToString();
+                    var message = item.Split(";".ToCharArray());
                     string emailto = string.Empty;
                     if (message.Length > 3)
                         emailto = message[3];
-                    this.MergeMailWithMultipleRecords(message[0], message[1], Convert.ToInt32(message[2]),emailto, message[4], Convert.ToBoolean(message[5]), message[6]
-                        , message[7], message[8], message[9], message[10], message[11], message[12], message[13],message[14]);
-
+                    this.MergeMailWithMultipleRecords(message[0],message[1],Convert.ToInt32(message[2]),emailto,message[4],Convert.ToBoolean(message[5]),message[6],message[7],message[8],message[9],message[10],message[11],message[12],message[13],message[14],row);
                     this.Log(string.Join(";", message), EventLogEntryType.Information);
-
+                    DatabaseInfo.UpdateMailMergeQueue(Convert.ToInt32(row["request_string"].ToString()),2, row["request_string"].ToString(), row["request_string"].ToString(), Convert.ToInt32(row["request_string"].ToString()));
                 }
-
             }
-            catch (MessageQueueException ee)
-            {
-                this.Log(ee.ToString(), EventLogEntryType.Error);
-            }
-            catch (Exception eee)
-            {
-                this.Log(eee.ToString(), EventLogEntryType.Error);
-            }
-            finally
-            {
-                msMq.Close();
-            }
+           
             Running = false;
 
         }
 
-
-        void FileCopy(string fileFrom, string fileTo, long bufferSize = 1024)
+        public static int GetProcessIdByWindowTitle(string AppId)
         {
-
-            try
+            Process[] P_CESSES = Process.GetProcesses();
+            for (int p_count = 0; p_count < P_CESSES.Length; p_count++)
             {
-                File.Copy(fileFrom, fileTo);
-                File.Delete(fileFrom);
+                if (P_CESSES[p_count].MainWindowTitle.Equals(AppId))
+                {
+                    return P_CESSES[p_count].Id;
+                }
             }
-            catch
-            { }
-            //byte[] buffer = new byte[bufferSize];
-            //using (FileStream inStream = new FileStream(fileFrom, FileMode.Open, FileAccess.Read, FileShare.Read))
-            //{
-            //  //  File.Copy(@"C:\inetpub\wwwroot\docs\t1.docx", @"\\192.168.3.15\Temp\Imran\LPSDocs\t1.docx");
-            //    using (FileStream outStream = new FileStream(fileTo, FileMode.Create, FileAccess.Write, FileShare.Write))
-            //    {
-            //        while (inStream.Position < inStream.Length - buffer.Length)
-            //        {
-            //            inStream.Read(buffer, 0, buffer.Length);
-            //            outStream.Write(buffer, 0, buffer.Length);
-            //        }
 
-            //        // Copy the remaining part.
-            //        buffer = new byte[inStream.Length - inStream.Position];
-            //        inStream.Read(buffer, 0, buffer.Length);
-            //        outStream.Write(buffer, 0, buffer.Length);
-            //    }
-            //}
+            return Int32.MaxValue;
         }
+
     }
 }

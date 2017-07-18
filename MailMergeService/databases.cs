@@ -81,6 +81,66 @@ namespace MailMergeService
             return result.Tables[0];
         }
 
+        public static DataTable getNewQueueItems()
+        {
+            DataSet result = new DataSet();// = string.Empty;
+
+            SqlConnection sqlConnection = new SqlConnection(ConfigurationManager.ConnectionStrings["dbaseConnection"].ToString());
+            SqlDataAdapter dataAdapter = new SqlDataAdapter();
+            SqlCommand select = new SqlCommand("getNewQueueItems");
+            @select.CommandType = CommandType.StoredProcedure;
+            @select.Connection = sqlConnection;
+            dataAdapter.SelectCommand = @select;
+
+            dataAdapter.Fill(result);
+
+            return result.Tables[0];
+        }
+
+        public static void AddtoMailMergeQueue(int status, string request_string, string pid_id, string message, DatabaseInfo dbase)
+        {
+
+            DataSet result = new DataSet();// = string.Empty;
+            SqlConnection sqlConnection = new SqlConnection(ConfigurationManager.ConnectionStrings["dbaseConnection"].ToString());
+            sqlConnection.Open();
+            SqlDataAdapter dataAdapter = new SqlDataAdapter();
+            SqlCommand select = new SqlCommand("AddtoMailMergeQueue");
+            @select.CommandType = CommandType.StoredProcedure;
+            @select.Connection = sqlConnection;
+            dataAdapter.SelectCommand = @select;
+
+            @select.Parameters.AddWithValue("@status", status);
+            @select.Parameters.AddWithValue("@request_string", request_string);
+            @select.Parameters.AddWithValue("@pid_id", pid_id);
+            @select.Parameters.AddWithValue("@message", message);
+            @select.Parameters.AddWithValue("@database_name", dbase.database_name);
+
+            select.ExecuteNonQuery();
+        }
+
+        public static void UpdateMailMergeQueue(int id, int status, string pid_id, string message, int processed_records)
+        {
+
+            DataSet result = new DataSet();
+            SqlConnection sqlConnection = new SqlConnection(ConfigurationManager.ConnectionStrings["dbaseConnection"].ToString());
+            sqlConnection.Open();
+            SqlDataAdapter dataAdapter = new SqlDataAdapter();
+            SqlCommand select = new SqlCommand("AddtoMailMergeQueue");
+            @select.CommandType = CommandType.StoredProcedure;
+            @select.Connection = sqlConnection;
+            dataAdapter.SelectCommand = @select;
+
+            @select.Parameters.AddWithValue("@id", id);
+            @select.Parameters.AddWithValue("@status", status);
+            @select.Parameters.AddWithValue("@pid_id", pid_id);
+            @select.Parameters.AddWithValue("@message", message);
+            @select.Parameters.AddWithValue("@processed_records", processed_records);
+
+            select.ExecuteNonQuery();
+        }
+
+
+
         public static string[] GetSchemeReportID(string filePath, DatabaseInfo dbase)
         {
             string[] info = { "-", "-" };
