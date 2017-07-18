@@ -214,7 +214,7 @@ namespace MailMerger
                     if (!File.Exists(_formatPath))
                         throw new Exception("Error opening source file - " + _formatPath);
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
                     Response.Write("There was a problem copying the Template file; please ensure it is not locked");
                 }
@@ -332,16 +332,8 @@ namespace MailMerger
         {
             try
             {
-             DatabaseInfo.AddtoMailMergeQueue(0,
-                    _formatPath + ";" + _dataSourcePath + ";" + _totalRecords + ";" +
-                    _email + ";" + _documentType + ";"
-                    + _cbChecked + ";" + _prefix + ";" + _field1 +
-                    ";" + _field2 + ";" + _field3 + ";"
-                    + _field4 + ";" + _field5 + ";" + _suffix + ";" + _delimiter + ";" +
-                    currentDbase.database_name,
-                    "",
-                    "",
-                    currentDbase, _totalRecords);
+                //TODO Send Meesage to Database table for queueing. Best to add the whole string to a single field so that it isn't restricted if fields need to be added later
+                // could add individual fields for databse and user, for display purpose
 
                 SendMessageToQueue(_formatPath + ";" + _dataSourcePath + ";" + _totalRecords + ";" +
                                    _email + ";" + _documentType + ";"

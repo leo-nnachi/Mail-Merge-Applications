@@ -25,10 +25,3 @@ C:\Users\Leo\Dropbox (Personal)\Project Folder\MailMerger\MailMerger\bin\Ionic.Z
 C:\Users\Leo\Dropbox (Personal)\Project Folder\MailMerger\MailMerger\obj\Debug\MailMerger.dll
 C:\Users\Leo\Dropbox (Personal)\Project Folder\MailMerger\MailMerger\obj\Debug\MailMerger.pdb
 C:\Users\Leo\Dropbox (Personal)\Project Folder\MailMerger\MailMerger\obj\Debug\MailMerger.csprojResolveAssemblyReference.cache
-C:\Users\Leo\Dropbox (Personal)\Git Repos\Mail Merger Applications\Mail-Merge-Applications\MailMerger\bin\MailMerger.dll.config
-C:\Users\Leo\Dropbox (Personal)\Git Repos\Mail Merger Applications\Mail-Merge-Applications\MailMerger\bin\MailMerger.dll
-C:\Users\Leo\Dropbox (Personal)\Git Repos\Mail Merger Applications\Mail-Merge-Applications\MailMerger\bin\MailMerger.pdb
-C:\Users\Leo\Dropbox (Personal)\Git Repos\Mail Merger Applications\Mail-Merge-Applications\MailMerger\bin\Ionic.Zip.dll
-C:\Users\Leo\Dropbox (Personal)\Git Repos\Mail Merger Applications\Mail-Merge-Applications\MailMerger\obj\Debug\MailMerger.csprojResolveAssemblyReference.cache
-C:\Users\Leo\Dropbox (Personal)\Git Repos\Mail Merger Applications\Mail-Merge-Applications\MailMerger\obj\Debug\MailMerger.dll
-C:\Users\Leo\Dropbox (Personal)\Git Repos\Mail Merger Applications\Mail-Merge-Applications\MailMerger\obj\Debug\MailMerger.pdb
